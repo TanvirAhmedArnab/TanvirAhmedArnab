@@ -31,11 +31,26 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%237c3aed&color_dots=%23ebedf0,%23ddd6fe,%23c4b5fd,%238b5cf6,%235b21b6
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2322d3ee&color_dots=%23161b22,%23164e63,%230e7490,%2306b6d4,%2367e8f9
 
-      - name: Publish SVGs to output branch
-        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865 # v4
+      - name: Check out output branch
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
-          target_branch: output
-          build_dir: dist
-          jekyll: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ref: output
+          path: output-branch
+          fetch-depth: 1
+
+      - name: Publish SVGs to output branch
+        shell: bash
+        run: |
+          cp dist/*.svg output-branch/
+          cd output-branch
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-contribution-grid-snake.svg github-contribution-grid-snake-dark.svg
+
+          if git diff --cached --quiet; then
+            echo "Contribution SVGs are already current."
+            exit 0
+          fi
+
+          git commit -m "chore: update contribution snake"
+          git push origin HEAD:output
