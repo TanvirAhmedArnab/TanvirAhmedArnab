@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Tanvir Ahmed Arnab — C# Gameplay Programmer</title>
+  <desc id="description">An animated light technical banner showing orbital paths, a C# monogram, and Tanvir's focus on Unity systems and .NET tools.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.55" stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#ecfeff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <radialGradient id="planet" cx="35%" cy="30%">
+      <stop offset="0" stop-color="#ede9fe"/>
+      <stop offset="0.35" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#475569" stroke-opacity="0.08"/>
+    </pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="1198" height="358" rx="26"/></clipPath>
+    <style>
+      .label { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 5px; }
+      .name { font-family: "Segoe UI", Arial, sans-serif; font-weight: 700; letter-spacing: -1px; }
+      .mono { font-family: Consolas, "Courier New", monospace; }
+      .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 24s linear infinite; }
+      .orbit.reverse { animation-direction: reverse; animation-duration: 34s; }
+      .pulse { animation: pulse 3s ease-in-out infinite; }
+      .cursor { animation: blink 1.15s steps(1,end) infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+      @keyframes blink { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .orbit,.pulse,.cursor { animation: none; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <circle cx="1120" cy="-50" r="260" fill="#06b6d4" opacity="0.05"/>
+    <circle cx="80" cy="420" r="290" fill="#8b5cf6" opacity="0.05"/>
+
+    <g transform="translate(920 180)">
+      <circle r="121" fill="none" stroke="#0284c7" stroke-opacity="0.24" stroke-width="1.5" stroke-dasharray="5 9"/>
+      <circle r="82" fill="none" stroke="#7c3aed" stroke-opacity="0.28" stroke-width="1.5"/>
+      <g class="orbit">
+        <circle cy="-121" r="8" fill="#0891b2" filter="url(#glow)"/>
+        <circle cx="82" r="5" fill="#7c3aed"/>
+      </g>
+      <g class="orbit reverse">
+        <circle cy="-82" r="4" fill="#475569"/>
+      </g>
+      <circle r="47" fill="url(#planet)" filter="url(#glow)"/>
+      <ellipse rx="72" ry="18" fill="none" stroke="url(#accent)" stroke-width="4" transform="rotate(-18)" opacity="0.8"/>
+      <text x="0" y="10" text-anchor="middle" fill="#ffffff" font-family="Consolas, monospace" font-size="28" font-weight="700">C#</text>
+    </g>
+
+    <g transform="translate(82 79)">
+      <rect x="0" y="0" width="546" height="34" rx="17" fill="#ffffff" stroke="#cbd5e1"/>
+      <circle cx="19" cy="17" r="4" fill="#e11d48"/>
+      <circle cx="34" cy="17" r="4" fill="#d97706"/>
+      <circle cx="49" cy="17" r="4" fill="#16a34a"/>
+      <text class="mono" x="72" y="22" fill="#64748b" font-size="13">developer-profile.cs</text>
+    </g>
+
+    <text class="label" x="82" y="153" fill="#0e7490" font-size="15">C# GAMEPLAY PROGRAMMER</text>
+    <text class="name" x="78" y="215" fill="#0f172a" font-size="52">Tanvir Ahmed Arnab</text>
+    <rect x="82" y="240" width="118" height="4" rx="2" fill="url(#accent)"/>
+    <text class="mono" x="82" y="279" fill="#475569" font-size="20">Unity systems  ·  .NET tools  ·  technical clarity</text>
+    <rect class="cursor" x="82" y="301" width="12" height="3" fill="#0891b2"/>
+
+    <g class="pulse" fill="#0891b2">
+      <circle cx="679" cy="65" r="2"/><circle cx="735" cy="303" r="2"/><circle cx="1090" cy="290" r="2"/>
+    </g>
+  </g>
+  <rect x="1" y="1" width="1198" height="358" rx="26" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+</svg>
