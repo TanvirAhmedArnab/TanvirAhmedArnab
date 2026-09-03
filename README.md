@@ -72,6 +72,16 @@ I prefer small, explicit systems with clear ownership and observable behavior. R
 
 </details>
 
+## Contribution trail
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TanvirAhmedArnab/TanvirAhmedArnab/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/TanvirAhmedArnab/TanvirAhmedArnab/output/github-contribution-grid-snake.svg">
+  <img alt="Animated snake moving through Tanvir Ahmed Arnab's GitHub contribution graph" src="https://raw.githubusercontent.com/TanvirAhmedArnab/TanvirAhmedArnab/output/github-contribution-grid-snake.svg" width="100%">
+</picture>
+
+<sub>Generated daily from my public GitHub contribution graph.</sub>
+
 ## Let’s connect
 
 I’m interested in opportunities where **C#**, **Unity**, **.NET**, gameplay systems, internal tools, and strong technical communication matter.
